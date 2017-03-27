@@ -187,7 +187,7 @@ extern "C" DLL_PUBLIC jlong Java_com_chestnut_SoundTouch_SoundTouch_newInstance(
 }
 
 
-extern "C" DLL_PUBLIC void Java_com_chestnut_SoundTouch_deleteInstance(JNIEnv *env, jobject thiz, jlong handle)
+extern "C" DLL_PUBLIC void Java_com_chestnut_SoundTouch_SoundTouch_deleteInstance(JNIEnv *env, jobject thiz, jlong handle)
 {
     SoundTouch *ptr = (SoundTouch*)handle;
     delete ptr;

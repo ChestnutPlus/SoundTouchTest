@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                soundTouch.setPitchSemiTones(1)
+                soundTouch.setTempo(1)
                         .setPitchSemiTones(2)
                         .setSpeed(10)
                         .processFile(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM) + "/hehe.wav",
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
                                     @Override
                                     public void onSuccess(String inputFile, String outputFile) {
-
+                                        soundTouch.close();
                                     }
 
                                     @Override
